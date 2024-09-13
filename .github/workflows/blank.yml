@@ -140,7 +140,7 @@ jobs:
         chmod 400 ec2.pem
 
         # SSH, SCP commands
-        SSH_COMMAND="ssh -i ec2.pem -o StrictHostKeyChecking=no $EC2_USER@$EC2_HOST"
+        SSH_COMMAND="ssh -i ec2.pem -o StrictHostKeyChecking=no $EC2_USER@$EC2_HOST -v"
         SCP_COMMAND="scp -i ec2.pem -o StrictHostKeyChecking=no"
 
         #Login to Docker registry
