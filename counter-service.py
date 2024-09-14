@@ -1,11 +1,11 @@
 # Counter service 
-from Flask import Flask, request, jsonify
+from flask import Flask, request, jsonify
 import os
 
 app = Flask(__name__)
 
 # Define the path for the counter file to store the data in Docker Volume
-COUNTER_FILE = "/data/counter.txt"
+COUNTER_FILE = "data/counter.txt"
 
 def read_counter():
     """
@@ -71,4 +71,4 @@ def health_check():
 if __name__ == '__main__':
     # Run the Flask app with binding to all interfaces on port 8080.
     # Debug mode is turned off for production use.
-    app.run(host='0.0.0.0', port=8080, debug=False)
+    app.run(host='0.0.0.0', port=8080, debug=True)
