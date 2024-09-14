@@ -1,11 +1,11 @@
 # Counter service 
-from flask import Flask, request, jsonify
+from Flask import Flask, request, jsonify
 import os
 
 app = Flask(__name__)
 
 # Define the path for the counter file to store the data in Docker Volume
-COUNTER_FILE = "data/counter.txt"
+COUNTER_FILE = "/data/counter.txt"
 
 def read_counter():
     """
