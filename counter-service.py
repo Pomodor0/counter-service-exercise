@@ -71,4 +71,4 @@ def health_check():
 if __name__ == '__main__':
     # Run the Flask app with binding to all interfaces on port 8080.
     # Debug mode is turned off for production use.
-    app.run(host='0.0.0.0', port=8080, debug=True)
+    app.run(host='0.0.0.0', port=8080, debug=False)
